@@ -1,10 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/YeUP75
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
--- Modify this code to update the DB schema diagram.
--- To reset the sample schema, replace everything with
--- two dots ('..' - without quotes).
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(5)   NOT NULL,
@@ -68,3 +62,11 @@ REFERENCES "employees" ("emp_no");
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
+
+-- Viewing the tables 
+SELECT * FROM departments;
+SELECT * FROM titles;	
+SELECT * FROM employees;	
+SELECT * FROM dept_emp;
+SELECT * FROM dept_manager;	
+SELECT * FROM salaries;
